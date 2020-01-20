@@ -1,0 +1,71 @@
+CREATE TABLE `expense`.`user` 
+(
+    	`id`		VARCHAR(25) NOT NULL ,
+	`name` 		VARCHAR(25) NOT NULL , 
+	`gender`	VARCHAR(6) NOT NULL , 
+	`mobileNumber` 	BIGINT(10) UNSIGNED NOT NULL , 
+	`balance` 	DOUBLE NOT NULL , 
+	`question` 	VARCHAR(25) NOT NULL , 
+	`answer` 	VARCHAR(25) NOT NULL , 
+	`password` 	VARCHAR(25) NOT NULL , 
+	`login_status` 	BOOLEAN NOT NULL , 
+	`picture` 	LONGBLOB NULL DEFAULT NULL , 
+	PRIMARY KEY (`id`(20))
+)
+ ENGINE = InnoDB; 
+
+edited :
+
+CREATE TABLE users
+(
+    id VARCHAR(25) NOT NULL  PRIMARY KEY,
+    name VARCHAR(25) NOT NULL , 
+    gender VARCHAR(6) NOT NULL , 
+    mobileNumber BIGINT(10) UNSIGNED NOT NULL , 
+    balance DOUBLE NOT NULL , 
+    question VARCHAR(25) NOT NULL , 
+    answer VARCHAR(25) NOT NULL , 
+    password VARCHAR(25) NOT NULL , 
+    login_status BOOLEAN NOT NULL , 
+    picture LONGBLOB NULL DEFAULT NULL
+) ; 
+
+Insertion query :
+
+INSERT INTO users VALUES(
+  "rj1611",
+  "Rishav Jain",
+  "Male",
+  7046222706,
+  25.5,
+  "What is your nick name?",
+  "Monu",
+  "12345",
+  0,
+  NULL
+)
+
+INSERT
+INTO
+  `users`(
+    `id`,
+    `name`,
+    `gender`,
+    `mobileNumber`,
+    `balance`,
+    `question`,
+    `answer`,
+    `password`,
+    `login_status`
+  )
+VALUES(
+  "rj1613",
+  "Rekha Jain",
+  "Feale",
+  9457616858,
+  255.5,
+  "What is your Mothers name?",
+  "Meera",
+  "12345",
+  0
+)
